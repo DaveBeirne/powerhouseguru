@@ -1,0 +1,499 @@
+/********************************************************************************************
+
+Version: 1.0
+Author: EasyPeasy Web Development for PowerHouse
+Author URI: http://www.easypeasy.ie
+
+*********************************************************************************************/
+
+
+@import 'reset'; // Reset - Normalize.css v4.2.0
+
+@import 'branding'; // colors, fonts etc...
+
+@import 'mixins'; // custom mixins
+
+@import 'responsive'; // media queries and responsive grid
+
+@import 'animate'; // animation
+
+
+/* --------------------------------
+
+General styling
+
+-------------------------------- */
+
+*, *::after, *::before {
+}
+
+
+body {
+	font: {
+		size: 1.1rem;
+		family: $primary-font; // variables inside partials > _variables.scss
+	}
+	color: $color-4;
+	background-color: $color-1;
+
+}
+
+html, body, header{
+  width:100%;
+  height:100%;
+	position: relative;
+}
+
+
+a {
+  color: $color-2;
+	text-decoration: none;
+  @include transition(color .4s ease);
+	cursor: pointer;
+  &:hover {
+    color: $color-3;
+  }
+}
+
+img, embed, object, video, svg {
+	max-width: 100%;
+}
+
+input, textarea {
+	font-family: $primary-font;
+	font-size: 1.6rem;
+}
+
+h2{
+	font-size: 40px;
+	color: $color-3;
+	padding-bottom: 15px;
+}
+
+h3{
+	color: white;
+	font-size: 30px;
+	line-height: 35px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 10px 0px;
+	text-align: center;
+
+	@include MQ(M) {font-size: 35px; line-height: 40px; text-align: left;}
+	@include MQ(L) {font-size: 35px; line-height: 40px; text-align: left;}
+}
+
+h4{
+	color:$color-2;
+	font-size: 22px;
+	line-height: 28px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+
+
+p{
+	font-size: 17px;
+	line-height: 22px;
+  padding: 20px 6%;
+
+	@include MQ(M) {font-size: 18px;line-height: 24px; 	padding: 10px 0px;}
+ 	@include MQ(L) {font-size: 18px;line-height: 24px; 	padding: 10px 0px;}
+}
+
+ul{}
+
+li{
+	font-size: 17px;
+	line-height: 24px;
+	margin-left: 5%;
+
+	@include MQ(M) {margin: 0;}
+	@include MQ(L) {margin: 0;}
+}
+
+section{
+	padding: 80px 0px;
+}
+
+.centerit{
+	text-align: center;
+
+	@include MQ(M) {text-align: left;}
+	@include MQ(L) {text-align: left;}
+}
+
+.clearfix{clear:both;}
+
+@import 'buttons'; // Buttons
+
+
+/* --------------------------------
+
+Navigation styling
+
+-------------------------------- */
+
+@import 'navigation'; // Navigation
+
+
+
+
+/* --------------------------------
+
+Sections
+
+-------------------------------- */
+
+
+
+/////// Header ////////
+header{
+	background:url("../imgs/photos/hero-1.jpg") center center;
+	background-size:cover;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	text-align: center;
+	display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+  .txtrot{
+		background: rgba($color-2,0.8);
+		color:white;
+		family: $primary-font;
+		padding: 30px 5%;
+		margin: 0 5%;
+		width: 90%;
+
+		@include MQ(M) {margin: 30px 25% 0 25%; width: 50%;}
+		@include MQ(L) {margin: 30px 25% 0 25%; width: 50%;}
+
+		.sml{
+			font-size: 30px;
+			line-height: 35px;
+			text-transform: uppercase;
+			display: block;
+		}
+		.lrg{
+			font-size: 30px;
+			font-weight: bold;
+			text-transform: uppercase;
+			line-height: 40px;
+			display: block;
+
+			@include MQ(M) {
+				font-size: 55px;
+				line-height: 65px;
+			}
+			@include MQ(L) {
+				font-size: 55px;
+				line-height: 65px;
+			}
+		}
+
+	}
+
+}
+
+nav{
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	padding: 10px 0;
+	background: rgba(0,0,0,0.5);
+	text-align: center;
+
+	img{
+		width: 90%;
+		@include MQ(M) {width: 50%;}
+		@include MQ(L) {width: 40%;}
+	}
+}
+
+
+@import 'txtanimate'; // Animated the Title Text
+
+
+
+
+/////// Services ////////
+#services{
+	margin:0px auto;
+	width: 100%;
+
+	@include MQ(M) {width: 1000px; margin:0px auto;}
+	@include MQ(L) {width: 1000px; margin:0px auto;}
+
+	.flexme{
+		display: flex;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		flex-flow: row wrap;
+
+
+		.serv {
+			width: 96%;  /* Or whatever */
+			height: 30px; /* Or whatever */
+			font-size: 20px;
+			line-height: 24px;
+			text-align: center;
+			color: white;
+			margin: 1% auto;  /* Magic! */
+			padding: 20px 1%;
+
+
+
+			@include MQ(M) {height: 50px; width: 21%; font-size: 22px; line-height: 26px; padding: 20px 1%;}
+			@include MQ(L) {height: 50px; width: 21%; font-size: 22px; line-height: 26px; padding: 20px 1%;}
+
+		}
+
+		.green{background-color: #61AE24;}
+		.orange{background-color:#F18D05;}
+		.yellow{background-color:#EDB92E;}
+		.purple{background-color:#7B5D93;}
+		.red{background-color:#CE1836;}
+		.aqua{background-color:#009989;}
+		.wine{background-color:#CE5973;}
+		.blue{background-color:#007ACD;}
+
+	}
+}
+
+
+/////// Pricing ////////
+#pricing{
+	 background-image: url('../imgs/photos/hero-2.jpg');
+	 background-size: cover;
+
+	.wrapit{
+		margin:0px auto;
+		width: 100%;
+		background: rgba(0,0,0,0.5);
+		padding: 15px 0px;
+
+		@include MQ(M) {width: 1000px; margin:0px auto; padding: 40px;}
+		@include MQ(L) {width: 1000px; margin:0px auto; padding: 40px;}
+	}
+
+	.highme{
+		background: $color-2;
+		padding: 8px;
+		color: white;
+		text-align: center;
+		display: block;
+
+		@include MQ(M) {}
+		@include MQ(L) {}
+
+		b{font-weight: bold;}
+	}
+
+}
+
+
+/////// Gallery ////////
+#gallery{
+	margin:0px auto;
+	width: 100%;
+
+	@include MQ(M) {width: 1000px; margin:0px auto;}
+	@include MQ(L) {width: 1000px; margin:0px auto;}
+}
+
+
+
+/////// Contact ////////
+#contact{
+	background: $color-2;
+	color: white;
+	margin:0px auto;
+	width: 100%;
+	height: 150px;
+	display: block;
+	background-image:none;
+
+	@include MQ(M) {
+		height: 50px;
+		background-image: url('../imgs/target.png');
+		background-repeat: no-repeat;
+		background-position: left;
+		background-position: 110px 70px;}
+
+	@include MQ(L) {
+		height: 50px;
+		background-image: url('../imgs/target.png');
+		background-repeat: no-repeat;
+		background-position: left;
+		background-position: 110px 70px;}
+
+	.wrap{
+		padding: 0 10%;
+
+		@include MQ(M) {padding: 0 10%;}
+		@include MQ(L) {padding: 0 10%;}
+
+		.title{
+			 font-size: 35px;
+			 line-height: 40px;
+			 padding-left: 0px;
+		   text-transform: uppercase;
+			 font-weight: bold;
+			 text-align: center;
+			 width: 100%;
+			 float: left;
+			 margin-top: 6px;
+
+			 @include MQ(M) {
+				 padding-left: 75px; text-align: left; width: 70%;
+				 font-size: 40px; line-height: 45px;}
+			 @include MQ(L) {
+				 padding-left: 75px; text-align: left; width: 70%;
+				 font-size: 40px; line-height: 45px;}
+
+		 }
+
+		 a:link, a:visited{
+			 color: white;
+			 display: block;
+			 cursor: pointer;
+
+			 &:hover{color: $color-2;}
+		 }
+
+		 button{
+			 float: left;
+			 border: 4px solid white;
+			 background: none;
+			 font-size: 28px;
+			 text-transform: uppercase;
+			 font-weight: bold;
+			 color: white;
+			 cursor: pointer;
+			 padding: 10px 20px;
+			 margin-left: 15%;
+			 margin-top: 20px;
+			 -webkit-transition-duration: .3s;
+				-moz-transition-duration: .3s;
+
+				@include MQ(M) {margin-left: 0; margin-top: 0;}
+ 			 @include MQ(L) {margin-left: 0; margin-top: 0;}
+
+			 &:hover{
+				 background: white;
+				 border: 4px solid white;
+				 color: $color-2;
+			 }
+
+		 }
+
+
+	}
+
+
+
+
+	@include MQ(M) {}
+	@include MQ(L) {}
+}
+
+
+/////// Footer ////////
+footer{
+	margin:0px auto;
+	padding: 40px 0px 100px 0px;
+	width: 100%;
+	background: $color-5;
+	background-image: url('../imgs/logo-footer.png');
+	background-repeat: no-repeat;
+	background-position: bottom center;
+
+	@include MQ(M) {padding: 40px 0px 60px 0px;}
+	@include MQ(L) {padding: 40px 0px 60px 0px;}
+
+	.leftcol,	.rghtcol{
+		width: 96%;
+		margin: 2%;
+		float: left;
+
+		@include MQ(M) {width: 42%;	margin: 4%;}
+		@include MQ(L) {width: 42%;	margin: 4%;}
+	}
+
+	.leftcol{
+
+		img{
+			width: 20%;
+			border-radius: 15px;
+			float: left;
+			margin-left: 20px;
+			margin-top: 15px;
+
+			@include MQ(M) {margin: 0;}
+			@include MQ(L) {margin: 0;}
+		}
+
+		h4{
+			float: left;
+		  font-size: 33px;
+			line-height: 38px;
+		  padding: 10px 0px 0px 25px;
+
+			@include MQ(M) {font-size: 40px; line-height: 45px;}
+			@include MQ(L) {font-size: 40px; line-height: 45px;}
+
+		}
+	}
+	.rghtcol{}
+}
+
+
+
+
+/////// Extra ////////
+#sample{
+   width:200px;
+	 background:green;
+
+
+    // Use to clear parent
+   @extend %clearfix;
+
+	 // Cross Browser Opacity
+	 @include opacity(0.8);
+
+	 // Media Query Size Medium
+	 @include MQ(M) {
+ 		width: 300px;
+ 	}
+  // Media Query Size Large
+ 	@include MQ(L) {
+ 		width: 400px;
+ 	}
+
+}
+
+/* --------------------------------
+
+Gallery Page
+
+-------------------------------- */
+@import 'gallery'; // Gallery Page

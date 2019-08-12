@@ -1,0 +1,41 @@
+
+#instafeed{
+	margin:0px auto;
+	width: 100%;
+
+	img{
+		width: 48%;
+		height: auto;
+
+		@include MQ(M) {width: 23%;}
+		@include MQ(L) {width: 23%;}
+	}
+
+}
+
+.instaimg{
+	padding: 1%;
+	-webkit-transition-duration: .3s;
+  -moz-transition-duration: .3s;
+
+	&:hover{opacity: 0.7;}
+}
+
+
+.instamore{
+	font-size: 16px;
+  line-height: 20px;
+  font-weight: normal;
+	cursor: pointer;
+	padding: 20px 30px;
+	width: 70%;
+	margin: 40px 10%;
+	background: $color-5;
+	border: none;
+	color: $color-4;
+	  -webkit-transition-duration: .3s;
+    -moz-transition-duration: .3s}
+
+.instamore:hover{
+	 background:#1e1e1e;
+	 color: $color-2;}

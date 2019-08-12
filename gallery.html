@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Meta -->
+	<meta name="keywords" content="Strength and Conditions, fitness portarlington, weight training, power training, gym portarlington, fitness training">
+	<meta name="author" content="Powerhouse">
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="PowerHouse - Portarlington, Laois " />
+	<meta property="og:description" content="Premium Strength &amp; Conditioning in Laois." />
+	<meta property="og:url" content="http://www.powerhouseguru.com/" />
+	<meta property="og:site_name" content="PowerHouse Fitness" />
+
+	<!-- Favicon -->
+	<link rel="apple-touch-icon-precomposed" href="imgs/fav/favicon-152.png">
+	<link rel="shortcut icon" href="imgs/fav/favicon.png">
+
+	<link rel="stylesheet" href="css/style.css"> <!-- CSS style -->
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+  <!-- Page Title -->
+	<title>Gallery: Powerhouse</title>
+</head>
+
+<body>
+
+
+<main>
+<img class="animated fadeInDown" src="imgs/logo.svg" alt="PowerHouse" />
+
+		<section class="title-page"><br>
+			<h2><span class="boldit">Gallery</span></h2>
+			<span class="sub-title">You can follow us on <a href="https://www.instagram.com/powerhouseguru/" title="Instagram" target="_blank" class="roll-link"><span data-title="Instagram">Instagram</span></a> to get notifications of our latest photos.</span>
+		</section>
+
+
+
+
+		<!-- Gallery Photos -->
+		<section><br><br>
+			<div id="instafeed"></div>
+			<button class="instamore">Load More <span class="boldit">Photos &#10097;&#10097;&#10097;</span></button>
+		</section>
+
+
+</main>
+
+
+	<!-- Jquery CDN -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	<!-- Jquery Fallback -->
+	<script type="text/javascript">
+	if (typeof jQuery == 'undefined') {
+	    document.write(unescape("%3Cscript src='js/jquery-2.1.4.js' type='text/javascript'%3E%3C/script%3E"));
+	}</script>
+
+	<!-- Project Java -->
+	<script src="js/velocity.min.js"></script>
+	<script src="js/custom.js"></script> <!-- Custom Java -->
+	<script src="js/nanobar.js"></script><!-- Loading NanoBar -->
+	<script src="js/instafeed.js"></script><!-- instagram Feed  -->
+	<script type="text/javascript">
+	    var userFeed = new Instafeed({
+	        get: 'user',
+	        userId: '1201717666',
+	        accessToken: '1201717666.1677ed0.8ad886549a13444e8349777ef6c78e70',
+	        resolution:'low_resolution',
+	        template: '<a href="{{link}}" target="_blank"><img class="instaimg" src="{{image}}" /></a>',
+	        // Filter images with tag
+	        // filter: function(image) {console.log(image); return image.tags.indexOf('davidbeirne') >= 0;} ,
+	        // Hide Load more button if no more
+	        after: function() {if (!userFeed.hasNext()) jQuery(".instamore").hide();}
+
+	    });
+	    userFeed.run();
+
+	    jQuery(".instamore").click( function() {
+	        userFeed.next();
+	    });
+	</script>
+
+
+</body>
+</html>

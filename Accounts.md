@@ -1,0 +1,7 @@
+
+
+Instagram: @powerhouseguru
+User ID: 1201717666
+Client ID: 537ccb4de4cb4cdabca1262172765f6c
+Client Secret: 1a65c6e4a3b04de8b3f0341e7923850f
+Access Token: 1201717666.1677ed0.8ad886549a13444e8349777ef6c78e70
